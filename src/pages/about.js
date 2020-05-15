@@ -4,18 +4,18 @@ import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 //import Image from "../components/image"
 import SEO from "../components/seo"
-import { FaGulp } from "react-icons/fa"
+//import { FaGulp } from "react-icons/fa"
 import BackgroundSection from "../components/Globals/BackgroundSection"
 import Info from "../components/Home/info"
 
-const IndexPage = ({ data }) => (
+const AboutPage = ({ data }) => (
   <Layout>
     <SEO title="Home" keywords={["gatsby", "application", "react"]} />
     {/* <FaGulp /> */}
     <BackgroundSection
       img={data.img.childImageSharp.fluid}
-      title="ben's alchemy"
-      styleClass="default-background"
+      title="about us"
+      styleClass="about-background"
     />
     <Info />
   </Layout>
@@ -23,7 +23,7 @@ const IndexPage = ({ data }) => (
 
 export const query = graphql`
   {
-    img: file(relativePath: { eq: "default-background.jpeg" }) {
+    img: file(relativePath: { eq: "about-background.jpeg" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid_tracedSVG
@@ -33,4 +33,4 @@ export const query = graphql`
   }
 `
 
-export default IndexPage
+export default AboutPage

@@ -1,6 +1,7 @@
 :root {
-  --mainBrown: #2d1ef1;
+  --mainBrown: #2d1e1f;
   --mainYellow: #ff9e09;
+  --mainYellow2: rgba(255, 158, 9, 0.5);
   --mainGrey: #ece8dc;
   --mainWhite: #fff;
   --mainDark: #222;
@@ -37,26 +38,41 @@ h6 {
   font-size: 2rem;
 }
 
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-main,
-menu,
-nav,
-section,
-summary {
-  display: block;
+.default-background,
+.about-background {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(rgba(255, 158, 8, 0.5), rgba(255, 158, 12, 0.7));
+  background-position: center;
+  background-size: cover;
 }
-audio,
-canvas,
-progress,
-video {
-  display: inline-block;
+
+.about-background {
+  min-height: 60vh;
+  /*  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(rgba(255, 158, 8, 0.5), rgba(255, 158, 12, 0.7));
+  background-position: center;
+  background-size: cover; */
 }
+
+.btn-yellow {
+  color: var(--mainYellow);
+  border-color: var(--mainYellow);
+}
+
+.btn-yellow:hover {
+  background: var(--mainYellow);
+  color: var(--mainBrown) !important;
+}
+
+.footer {
+  background: var(--mainBrown);
+}
+
 audio:not([controls]) {
   display: none;
   height: 0;
@@ -89,18 +105,7 @@ strong {
 dfn {
   font-style: italic;
 }
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
-}
-mark {
-  background-color: #ff0;
-  color: #000;
-}
-small {
-  font-size: 80%;
-}
-sub,
+
 sup {
   font-size: 75%;
   line-height: 0;
@@ -113,12 +118,7 @@ sub {
 sup {
   top: -0.5em;
 }
-img {
-  border-style: none;
-}
-svg:not(:root) {
-  overflow: hidden;
-}
+
 code,
 kbd,
 pre,
