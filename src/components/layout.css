@@ -73,6 +73,10 @@ h6 {
   background: var(--mainBrown);
 }
 
+.menu {
+  background: var(--mainGrey);
+}
+
 audio:not([controls]) {
   display: none;
   height: 0;
@@ -217,15 +221,6 @@ html {
   font: 112.5%/1.45em georgia, serif;
   box-sizing: border-box;
   overflow-y: scroll;
-}
-* {
-  box-sizing: inherit;
-}
-*:before {
-  box-sizing: inherit;
-}
-*:after {
-  box-sizing: inherit;
 }
 
 @media only screen and (max-width: 480px) {
